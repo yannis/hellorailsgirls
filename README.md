@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 2.3.3
 
-Things you may want to cover:
+* Rails version: 5.1.2
 
-* Ruby version
+* System dependencies:
+  - redis server: 3.0.5
+  - yarn: 0.24.6
 
-* System dependencies
+* Load packages: `$ yarn`
 
-* Configuration
+* Database creation: `$ bundle exec rails db:create`
 
-* Database creation
+* Database initialization: `$ bundle exec rails db:create`
 
-* Database initialization
+* How to run the test suite: `$ bundle exec rake`
 
-* How to run the test suite
+* Precompile assets: `$ bundle exec rails assets:precompile`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Deployment:
+```
+export RAILS_ENV=production
+rvm use 2.3.3
+nvm use 6
+npm i -g yarn
+yarn
+bundle install
+bundle exec rails db:migrate
+bundle exec rails assets:precompile
+bundle exec rails s
+```
