@@ -1,0 +1,27 @@
+<div id='main-carousel' class="carousel slide align-items-center" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <% @railsgirls.each do |railsgirl| %>
+      <div class="carousel-item">
+        <h1>Hello <%= railsgirl.name %>!</h1>
+      </div>
+    <% end %>
+    <div class="carousel-item active">
+      <h1>Hello Rails Girls!</h1>
+    </div>
+  </div>
+</div>
+<p>
+  <%= link_to 'Say something!', new_rails_girl_path, class: 'btn btn-success' %>
+</p>
+<div id="messages">
+  <% @railsgirls.each do |girl| %>
+  <blockquote class="blockquote">
+    <p>
+      <%= girl.message %>
+    </p>
+    <footer class="blockquote-footer">
+      <%= girl.name %>
+    </footer>
+  </blockquote>
+  <% end %>
+</div>

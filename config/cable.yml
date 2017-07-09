@@ -1,10 +1,9 @@
-development:
-  adapter: async
+development: &development
+  adapter: redis
+  url: redis://localhost:6379
 
-test:
-  adapter: async
+test: *development
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: hellorailsgirls_production
+  url: <%= ENV['REDISTOGO_URL'] %>

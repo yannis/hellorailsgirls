@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rails_girl.name %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @rails_girl.message %>
+</p>
+
+<%= link_to 'Edit', edit_rails_girl_path(@rails_girl) %> |
+<%= link_to 'Back', rails_girls_path %>

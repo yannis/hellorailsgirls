@@ -1,0 +1,29 @@
+<%= form_with(model: rails_girl, local: true) do |form| %>
+  <% if rails_girl.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rails_girl.errors.count, "error") %> prohibited this rails_girl from being saved:</h2>
+
+      <ul>
+      <% rails_girl.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name, 'Your name' %>
+    <%= form.text_field :name, id: :rails_girl_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :message, 'Your message' %>
+    <%= form.text_area :message, id: :rails_girl_message, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Say it!', class: 'btn btn-success' %>
+    or
+    <%= link_to 'cancel', root_path %>
+  </div>
+<% end %>
