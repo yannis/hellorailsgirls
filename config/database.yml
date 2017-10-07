@@ -80,7 +80,7 @@ test:
 #
 production:
   <<: *default
-  host: <%= ENV['DATABASE_URL'] %>
+  host: postgres://postgres13407-hellorailsgirls.hidora.com
   database: hellorailsgirls_production
   username: hellorailsgirls
-  password: <%= ENV['HELLORAILSGIRLS_DATABASE_PASSWORD'] %>
+  password: qwertzuiop
