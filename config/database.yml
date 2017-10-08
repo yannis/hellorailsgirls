@@ -82,5 +82,5 @@ production:
   <<: *default
   host: <%= ENV['DATABASE_URL'] %>
   database: hellorailsgirls_production
-  username: hellorailsgirls
-  password: <%= ENV['HELLORAILSGIRLS_DATABASE_PASSWORD'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
